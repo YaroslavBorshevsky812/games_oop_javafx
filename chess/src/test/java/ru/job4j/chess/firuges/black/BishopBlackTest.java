@@ -29,13 +29,13 @@ public class BishopBlackTest extends TestCase {
 //    public void testWhenWayWork(){
 //        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
 //        List<Cell> expected = new ArrayList<>();
-//        expected.add(Cell.B2);
-//        assertThat(bishopBlack.way(Cell.B2), is(expected));
+//        expected.add(Cell.A3);
+//        assertThat(bishopBlack.way(Cell.A3), is(expected));
 //    }
     @Test
     public void testWhenIsDiagonal(){
         BishopBlack bishopBlack = new BishopBlack(Cell.C7);
-        boolean expected = bishopBlack.isDiagonal(Cell.C7, Cell.B2);
+        boolean expected = bishopBlack.isDiagonal(Cell.C7, Cell.B6);
         assertEquals(expected, (true));
     }
 }
