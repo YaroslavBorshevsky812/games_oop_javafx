@@ -20,6 +20,11 @@ public class BishopBlack implements Figure {
 
     @Override
     public Cell[] way(Cell dest) {
+        if (!isDiagonal(position, dest)) {
+            throw new IllegalStateException(
+                    String.format("is not diagonal" + " ", dest)
+            );
+        }
 
         int size = Math.abs(dest.getX() - this.position.getX());
         Cell[] steps = new Cell[size];
