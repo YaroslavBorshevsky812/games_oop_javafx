@@ -21,9 +21,7 @@ public final class Logic {
         Figure figure = figures[index];
 
         Cell[] steps = figures[index].way(dest);
-        if(!free(steps)){
-           throw new OccupiedCellException();
-        } else {
+        if(free(steps)){
             figures[index] = figures[index].copy(dest);
         }
     }
@@ -34,6 +32,8 @@ public final class Logic {
             for (Cell cell:steps) {
                 if (figure.position() == cell) {
                     rsl = false;
+                } else {
+                    throw new OccupiedCellException();
                 }
             }
         }
