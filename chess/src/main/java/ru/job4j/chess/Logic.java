@@ -32,8 +32,6 @@ public final class Logic {
             for (Cell cell:steps) {
                 if (figure.position() == cell) {
                     rsl = false;
-                } else {
-                    throw new OccupiedCellException();
                 }
             }
         }
